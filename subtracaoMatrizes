@@ -1,0 +1,44 @@
+matrix1 = [ [0, 0], [0, 0], [0, 0], [0, 0] ]
+matrix2 = [ [0, 0], [0, 0], [0, 0], [0, 0] ]
+matrixResult = [ [0, 0], [0, 0], [0, 0], [0, 0] ]
+
+print('-='*30)
+print("Matrix 1")
+matrix1 = [ [0, 0], [0, 0], [0, 0], [0, 0] ] # this matrix is ​​a list containing 4 lists inside (these 4 lists are the lines)
+for l in range(0, 4): #lines for feeding
+  for c in range(0, 2): #columns for feeding
+    matrix1[l][c] = int(input(f'Enter the value for [{l} {c}]: '))#I put these inputs in the matrix, in line [l] and column [c]
+for l in range(0, 4): #lines for display
+  for c in range(0, 2): #columns for display
+    print(f'[{matrix1[l][c]:^5}]', end='')
+  print(" ")
+print('-='*30)
+print(" ")
+
+print('-='*30)
+print("Matrix 2")
+matrix2 = [ [0, 0], [0, 0], [0, 0], [0, 0] ] # this matrix is ​​a list containing 4 lists inside (these 4 lists are the lines)
+for l in range(0, 4): #lines for feeding
+  for c in range(0, 2): #columns for feeding
+    matrix2[l][c] = int(input(f'Enter the value for [{l} {c}]: '))#I put these inputs in the matrix, in line [l] and column [c]
+for l in range(0, 4): #lines for display
+  for c in range(0, 2): #columns for display
+    print(f'[{matrix2[l][c]:^5}]', end='')
+  print(" ")
+print('-='*30)
+print(" ")
+
+
+def subtract(matrix1, matrix2):
+    print('-='*30)
+    print("Matrix Result")
+    matrixResult = [ [0, 0], [0, 0], [0, 0], [0, 0] ]
+  
+    for i in range(0, 4):     
+        for j in range(0, 2):
+             matrixResult[i][j] = matrix1[i][j] - matrix2[i][j]
+             print(f'[{matrixResult[i][j]:^5}]', end='')
+        print("")
+    print('-='*30)
+
+subtract(matrix1, matrix2)
